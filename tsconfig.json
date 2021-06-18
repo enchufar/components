@@ -1,0 +1,10 @@
+{
+  "declaration": "true",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
+    "noImplicitAny": false,
+    "jsx": "react"
+  },
+  "include": ["src"]
+}
