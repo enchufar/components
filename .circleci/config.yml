@@ -21,6 +21,19 @@ jobs:
       - run:
           name: Run Tests
           command: echo 0;
+  deploy: 
+    docker: 
+      - image: cimg/node:15.1
+    steps: 
+      - checkout
+      - restore_cache:
+          # See the configuration reference documentation for more details on using restore_cache and save_cache steps
+          # https://circleci.com/docs/2.0/configuration-reference/?section=reference#save_cache
+          keys:
+            - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+      - run:
+          name: Building assets
+          command: npm run build
 
 workflows:
   orb-free-workflow:
