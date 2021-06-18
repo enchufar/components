@@ -1,0 +1,24 @@
+{
+  "name": "enchufar-components",
+  "version": "0.0.1",
+  "description": "A set of components from Enchuf.ar",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/enchufar/components.git"
+  },
+  "keywords": [
+    "components",
+    "react",
+    "ui"
+  ],
+  "author": "Hugo Farji & Nayla Belen Fernandez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enchufar/components/issues"
+  },
+  "homepage": "https://github.com/enchufar/components#readme"
+}
