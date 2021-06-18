@@ -21,7 +21,7 @@ jobs:
       - run:
           name: Run Tests
           command: echo 0;
-  deploy: 
+  publish: 
     docker: 
       - image: cimg/node:15.1
     steps: 
