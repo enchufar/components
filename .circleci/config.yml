@@ -36,6 +36,7 @@ jobs:
           command: npm run build
 
 workflows:
-  orb-free-workflow:
+  enchufar-components:
     jobs:
       - test
+      - publish
