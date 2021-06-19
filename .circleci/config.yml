@@ -55,6 +55,9 @@ jobs:
           # https://circleci.com/docs/2.0/configuration-reference/?section=reference#save_cache
           keys:
             - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+      - add_ssh_keys:
+          fingerprints:
+            - "54:7a:26:f8:dd:da:6e:a3:e4:a7:b8:2e:96:88:14:f4"
       - run:
           name: install packages
           command: npm ci
