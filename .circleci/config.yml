@@ -39,7 +39,7 @@ jobs:
           command: npm run build
       - run:
           name: build types
-          command: npm run build
+          command: npm run build-types
       
 
 workflows:
