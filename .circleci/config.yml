@@ -57,7 +57,7 @@ jobs:
             - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
       - add_ssh_keys:
           fingerprints:
-            - "54:7a:26:f8:dd:da:6e:a3:e4:a7:b8:2e:96:88:14:f4"
+            - "3b:a9:1b:aa:03:ee:d1:47:8f:f7:1b:8b:e2:b5:1a:b5"
       - run:
           name: install packages
           command: npm ci
