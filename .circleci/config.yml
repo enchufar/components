@@ -51,7 +51,10 @@ jobs:
 workflows:
   enchufar-components:
     jobs:
-      - test
+      - test:
+          filters:
+            tags:
+              only: /.*/
       - publish:
           requires: 
             - test
