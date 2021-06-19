@@ -35,8 +35,12 @@ jobs:
           name: install packages
           command: npm ci
       - run:
-          name: Building assets
+          name: build assets
           command: npm run build
+      - run:
+          name: build types
+          command: npm run build
+      
 
 workflows:
   enchufar-components:
