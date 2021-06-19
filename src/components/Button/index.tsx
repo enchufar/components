@@ -1,15 +1,18 @@
 import React from 'react'
+import './index.css'
 
 export type ButtonProps = {
-  label: string;
-  type: 'filled' | 'border' | 'borderless'
+  text: string;
+  variant: 'filled' | 'border' | 'borderless',
+  disabled: boolean,
+  onClick: React.ClickEventHandler<HTMLButtonElement>
 }
 
-const Button = ({ label, type }: ButtonProps) => {
+const Button = ({ text, variant, disabled = false, onClick = () => {} }: ButtonProps) => {
   return (
-    <>
-      Hola {label}
-    </>
+    <button className={['buttonn', variant].join(' ')} disabled={disabled} onClick={onClick}>
+      {text}
+    </button>
   )
 }
 

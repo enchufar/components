@@ -5,3 +5,5 @@ babelrc.json
 tsconfig.json
 webpack.config.js
 .gitignore
+.storybook
+storybook-static

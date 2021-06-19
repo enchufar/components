@@ -45,7 +45,32 @@ jobs:
           command: |
             npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
             npm publish
+  documentation:
+    docker: 
+      - image: cimg/node:15.1
+    steps:
+      - checkout
+      - restore_cache:
+          # See the configuration reference documentation for more details on using restore_cache and save_cache steps
+          # https://circleci.com/docs/2.0/configuration-reference/?section=reference#save_cache
+          keys:
+            - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+      - run:
+          name: install packages
+          command: npm ci
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g --silent gh-pages@2.0.1
+            git config user.email "ci@enchuf.ar"
+            git config user.name "cienchufar"
+      - run:
+          name: Build storybook pages
+          command: npm run build-storybook
       
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dist storybook-static
       
 
 workflows:
