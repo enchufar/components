@@ -42,7 +42,9 @@ jobs:
           command: npm run build-types
       - run:
           name: publish to npm
-          command: npm publish
+          command: |
+            npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            npm publish
       
       
 
