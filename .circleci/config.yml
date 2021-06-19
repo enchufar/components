@@ -59,7 +59,7 @@ jobs:
       
       - run:
           name: Deploy docs to gh-pages branch
-          command: npx gh-pages --dist storybook-static
+          command: npx gh-pages -m ‘auto commit [ci skip]’ --dist storybook-static
       
 
 workflows:
