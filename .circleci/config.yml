@@ -88,3 +88,6 @@ workflows:
               only: /^v.*/
             branches:
               ignore: /.*/
+      - documentation:
+          requires:
+            - test
