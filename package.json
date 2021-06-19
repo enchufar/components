@@ -1,6 +1,6 @@
 {
-  "name": "enchufar-components",
-  "version": "0.0.1",
+  "name": "enchufar-components-test",
+  "version": "0.0.2",
   "description": "A set of components from Enchuf.ar",
   "scripts": {
     "build": "webpack",
