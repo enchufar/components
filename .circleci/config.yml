@@ -40,6 +40,10 @@ jobs:
       - run:
           name: build types
           command: npm run build-types
+      - run:
+          name: publish to npm
+          command: npm publish
+      
       
 
 workflows:
