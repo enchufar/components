@@ -61,7 +61,6 @@ jobs:
       - run:
           name: Install and configure dependencies
           command: |
-            npm install -g --silent gh-pages@2.0.1
             git config user.email "ci@enchuf.ar"
             git config user.name "cienchufar"
       - run:
@@ -70,7 +69,7 @@ jobs:
       
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages --dist storybook-static
+          command: npx gh-pages --dist storybook-static
       
 
 workflows:
